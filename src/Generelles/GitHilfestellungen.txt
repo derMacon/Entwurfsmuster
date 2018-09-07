@@ -1,0 +1,3 @@
+Hilfen bei Git: 
+- https://github.com/codepath/ios_guides/wiki/Using-Git-with-Terminal (Guide zum push / pull)
+- https://gist.github.com/alexpchin/102854243cd066f8b88e (Neues Repo anlegen)
