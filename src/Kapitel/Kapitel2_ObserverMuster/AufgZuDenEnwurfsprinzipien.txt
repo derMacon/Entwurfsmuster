@@ -1,0 +1,28 @@
+Aufgabe zu den Entwurfsprinzipien: 
+Beschreiben Sie fuer jedes Entwurfsprinzip, wie das Observer-Muster das Prinzip umsetzt. 
+
+Prinzipie: 
+1. Identifizieren Sie die Aspekte Ihrer Anwendung, die sich aendern koennen und trennen Sie sie 
+   von denen, die konstant bleiben.
+2. Programmieren Sie auf eine Schnittstelle, nicht auf eine Implementierung.
+3. Ziehen Sie die Komposition der Vererbung vor.
+
+Erklaerungen: Eigene
+1. Beobachter koennen sich aendern, werden daher zusammengefasst und ausgelagert.
+2. Da die Beobachter lediglich ein Interface implementieren und keine Klasse erweitern, besteht 
+   hier eine lose Bindung d.h. man Programmiert auf eine Schnittstelle.
+3. Die beiden Parteien (Beobachter, Subjekt) implementieren jeweils nur ein Interface und 
+   erweitern keine Superklasse.
+   
+Erklaerungen: Muster (S. 77)
+1. Das, was beim Observer-Muster variiert, ist der Zustand des Objekts und die Anzahl sowie die 
+   Typen der Beobachter. Mit diesem Muster koennen Sie die Objekte variieren, die vom Zustand des 
+   Objekts abhaengig sind, ohne das Subjekt veraendern zu muessen. Das nennt man verausschaen 
+   handeln!
+2. Subjekt und Beobachter nutzen beide Interfaces. Das Subjekt haelt Objekte nach, die das 
+   Interface Observer implementieren, waehrend die Beobachter sich registrieren und vom 
+   Subjekt-Interface benachrichtigt werden. Wie wir gesehen haben, haelt das die die Dinge 
+   ordentlich und locker gebunden. 
+3. Das Observer-Muster nutyt Komposition um eine beliebige Anzahl von Beobachtern mit ihren 
+   Subjekten zu verbnden. Diese Beziehungen werden nicht durch irgendeine Art von 
+   Vererbungshierachie implementiert. Nein sie werden zur Laufzeit durch Komposition eingerichtet!

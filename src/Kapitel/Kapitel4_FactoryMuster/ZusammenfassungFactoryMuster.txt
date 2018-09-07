@@ -1,0 +1,4 @@
+Definition: 
+Facoty - Definiert eine Schnittstelle die zur Erstellung eines Objekts, laesst aber die 
+Unterklassen entscheiden, welche Klassen instantiiert werden. Factory Method ermoeglicht einer 
+Klasse, die Instantiierung in Unterklassen zu verlagern. 

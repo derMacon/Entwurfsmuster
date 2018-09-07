@@ -1,0 +1,10 @@
+Strategy-Muster:
+Das  Strategy-Muster definiert  eine  Familie von Algorithmen,  kapselt  sie  einzeln  und macht sie
+austauschbar. Das Strategy-Muster  ermoeglicht  es, den  Algrithmus unabhaengig  von den Clients die
+ihn einsetzen, variieren zu lassen.
+
+Vorteile: 
+Bei  diesem  Entwurft  koennen  andere Typen  von  Objekten unsere  Flug- und  Quakverhalten  wieder
+verwenden (Bezug zu Kap. 1), weil diese Verhalten nicht mehr in unseren Ente-Klassen verborgen sind.
+Wir  koennen  neue Verhalten hinzufuegen, ohne  irgendeine unserer bestehenden  Verhaltensklassen zu
+aendern oder Hand an eine der Enten-Klassen zu legen, die Flugverhalten nutzen. 

@@ -1,0 +1,40 @@
+Definition: 
+Decorator - Fuegt einem Objekt dynamisch zusaetzliche Verantwortlichkeit hinzu. Dekorierer bieten 
+eine flexible Alterntive zur Ableitung von Unterklassen zum Zweick der Erweiterung der 
+Funktionalitaet.
+
+Punkt fuer Punkt: S. 105
+- Vererbung ist eine Form von Erweiterung, aber nicht notwendigerweise der beste Weg, um Ihren 
+  Entwuerfen Flexiblitaet zu verleihen. 
+- Unsere Entwuerfe sollen die Erweiterung von Verhalten ermoeglichen, ohna dass dazu bestehnder 
+  Code geaendert werden muesste.
+- Oft keonnen Komposition und Delegierung verwendet werden, um zur Laufzeit neue Verhalten 
+  hinzuzufuegen.
+- Fuer die Erweiterung von Verhalten bietet das Decorator-Muster eine Alternative zur Ableitung 
+  von Unterklassen.
+- Das Decorator-Muster schliesst einen Satz von Dekorierer-Klassen ein, die verwendet werden, um 
+  konkrete Komponenten einzupacken. 
+- Dekorierer-Klassen spiegeln den Typ der Komponente wider, die sie dekorieren. (Sie haben sogar 
+  tatsaechlich den gleichen Typ wie die Komponente, die sie dekorieren, entweder durch Vererbung 
+  oder durch die Implementerung eines Interface.)
+- Dekorierer aendern das Verhalten der Komponenten, indem sie vor und / oder nach (oder auch an 
+  Stellen von) Methodenaufrufen auf der Komponente neue Funktionalitaeten hinzufuegen. 
+- Sie koennen eine Komponente mit einer bliebigen Zahl vn Dekorierern einpacken. 
+- Dekorierer sind fuer die Clients der Komponente ueblichweise transparent, ausser wenn sich der 
+  Client auf den konkreten Typ der Komponente stuetzt.
+- Dekorierer koennen in Ihren Entwuerfen zu vielen kleinen Objekten fuerhen, und eine 
+  uebermaessige Verwendung kann den unuebersichtlich machen.  
+ 
+Wann das Decorator-Muster ungeeignet ist: 
+- Wenn Sie mit Code arbeiten, der auf den Typ einer konkreten Komponente angewiesen ist, 
+  zerbrechen Dekorierer diesen Code. Solange Sie nur Code auf Basis des abstrakten 
+  Komponententyps schreiben, bleibt die Verwendung von Dekorierern fuer ihren Code transparent.
+  (Muster z.B. fuer Rabatsystem beim Kaffeehaus aus diesem Kapitel ungeeignet.)
+- Dekorierer sollen den Objekten, die sie einpacken Verhalten hinzufuegen. Wenn Sie begninnen, 
+  auf mehreren Schichten in der Dekoriererkette zu blicken, dann strecken Sie Decorator ueber 
+  seinen eigentlichen Zweck.
+  
+Gut zu wissen: 
+- Die java.io-Klassen verwenden ebenfalls das Decorator-Muster. Es gibt diverse Streams mit 
+  jeweils unterschiedlichen Aufgaben, und es gibt die Klasse FilterInputStream die als Superklasse 
+  fuer verschiedene Dekorierer arbeitet.

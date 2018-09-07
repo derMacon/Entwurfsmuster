@@ -1,0 +1,44 @@
+Problemstellung: 
+- Wetterstation liefert Daten (Luftdruck, Temperatur, etc.).
+- Gefragt ist ein WetterDaten-Objekt. 
+- Diverse Anzeigegeraete sollen in der Lage sein, sich die Daten vom WetterDaten-Objekt zu ziehen 
+  und entsprechend darzustellen. Problematisch wird es, wenn verschiedene Anzeigegeraete nur 
+  bestimmte Daten anzeigen sollen. 
+- Besonderes Augenmerk bei dieser Aufgabe, die Daten sollen mit einem einzigen Aufruf 
+  aktualisiert werden. 
+- Wichtig: Es soll moeglich sein neue Anzeigeraete einzubinden. Hierbei soll der zus. Aufwand so 
+  gering wie moeglich gehalten werden. 
+
+Loesung: Observer-Muster (Grundsaetzliches Prinzip)
+Man definiert ein Interface z.B. "Subjekt" das die Schnittstelle fuer das WetterDaten-Objekt 
+angibt. Hierzu gehoeren die Methoden um einen Beobachter zu registrieren, zu entfernen oder 
+diesen ueber die Aktualisierung der Daten zu informieren (bzw. ihm diese zukommen zu lassen). Die 
+Idee beim Observer-Muster ist naemlich, dass ein Datenobjekt mit entsprechenden Feldern ein 
+Attribut mit einer Liste von Beobachtern haelt die Zugriff auf die Felder besitzen. Dies kann 
+mithilfe einer Uebergabe des Objektes geschehen oder aber mit einer tatsaechlichen Uebergabe von 
+Parametern. Mit den Methoden zum Registrieren und Entfernen werden die Beobachter der Liste 
+hinzugefuegt oder entfernt. Das WetterDaten-Objekt aus dem Bsp. implementiert jetzt dieses 
+Interface. Anschliessend wird ein zweites Interface fuer die Beobachter (im Bsp. die 
+verschiedenen Anzeig-Klassen) geschrieben. Die Beobachter informieren dieses jeweils und haben 
+damit Zugriff auf eine Methode zum Aktualisieren der Werte. Hier koennen direkt die Parameter 
+uebergeben werden, oder aber das Datenobjekt selbst (um mit Gettern die Daten zu uebermitteln). 
+
+Observable-Muster aus java.util.Observable / Observer 
+Es gibt bereits ein vorgefertigtes Observer-Muster in der Standardbibliothek util. Hier erbt das 
+jeweilige Datenobjekt von der Superklasse Observable. Diese Klasse bringt bereits die Liste aus 
+Beobachtern und weitere Methoden wie die setChanged() und notfyObservers() Methoden. Wichtig 
+hierbei ist zu beachten, dass man erst die Beobachter benachrichtigen kann wenn setChanged 
+aktiviert wurde. NotifyObservers() ist ausserdem ueberladen, denn es ist ist moeglich neben dem 
+eigentlichen Datenobjekt (hier WetterDaten-Objekt) noch ein anderes zu uebergeben, welches z.B. 
+weitere Werte enthalten kann. 
+Zum genauen Aufbau siehe Code.
+
+Nachteile der Standardbibliothek: 
+- Reihenfolge der Auswertung aendert sich -> Ungeeignet fuer Anwendungen wo dies von Bedeutung 
+  sein sollte.
+- Observable ist eine Klasse und kein Interface -> Klasse kann daher keine andere Klasse 
+  erweitern und schlecht wartbar sowie wiederverwendbar.
+- Observable schuetzt entscheidende Methoden -> z.B. setChanged(), kann daher auch nur von 
+  erbenden Klassen aufgerufen werden.
+  
+Vorteile: Siehe AufgZuDenEntwurfsprinzipien.txt

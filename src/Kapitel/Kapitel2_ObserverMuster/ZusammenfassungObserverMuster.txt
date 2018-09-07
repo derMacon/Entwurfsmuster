@@ -1,0 +1,29 @@
+Observer-Muster: 
+Das Observer-Muster definiert eine Eins-zu-viele-Abhaengigkeit zwischen Objekten in der Art, dass 
+alle abhaengigen Objekte benachrichtigt werden, wenn sich der Zustand des einen Objekts aendert. 
+
+Gutes Alltagsbeispiel: Zeitungsabonnementsdienst
+- Man moechte Abonnent werden -> man wird auf die Liste der Abonennten gesetzt. 
+- Neue Ausgabe wird ausgegeben (aktualisiert) -> Alle Abonnementen der Liste werden benachrichtigt. 
+- Bei der Standardbibliothek utils ist bereits ein solches Muster vorgegeben mit dem es fuer die 
+  Abonennten sogar moeglich ist sich jederzeit per Getter-Methoden die Daten zu ziehen ohne das 
+  eine entsprechende Methode im Subjekt aufgerufen werden muss.
+- Auf Wunsch ist es ebenfalls moeglich wieder aus der Liste der Abonennten auszutreten. 
+
+Punkt fuer Punkt Zusammenfassung (S. 74): 
+- Das Observer-Musster definiert ein Eins-zu-viele-Verhaeltnis zwischen Objekten.
+- Subjekte oder, wie wir sie auch kennen, Observables aktualisieren Beobachter ueber eine 
+  Schnittstelle.
+- Die Beobachter sind insofern locker angebunden, als das Bbservable ueber sie nichts anderes 
+  weiss, als dass sie das Interface Observer implementiern. 
+- Sie koennen Daten aus dem Observable herausgeben oder herausziehen, wenn Sie das Muster 
+  verwenden (wobei das Herausziehen als die "richtigere" Methode betrachtet wird). 
+- Verlassen Sie sich nicht auf eine bestimmte Reihenfolge der Benachrichtigung Ihrer Beobachter. 
+- Java besitzt eine Reihe von Implementierungen des Observer-Musters, einschliesslich des 
+  allgemeinen java.util.Observable.
+- Nehmen Sie sich vor den Haken der Implementierung von java.util.Observable in Acht. (Siehe 
+  Erklaerung Kap. 1).
+- Haben Sie keine Hemmungen, Ihre eigene Observable-Implementierung zu schreiben, wenn dies 
+  erforderlich ist.
+- Swing macht wie andere GUI-Frameworks extensiven Gebrauch vom Observer-Muster.
+- Sie finden das Muster auch an vielen anderen Orteien einschliesslich JavaBeans und RMI. 

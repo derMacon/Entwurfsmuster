@@ -1,0 +1,5 @@
+Definition einer einfachen Fabrik: (S. 117)
+- Kein Entwurfsmuster sondern eher ein Programmiereridiom.
+- Clients moechten spezifische Instanzen einer abstrakten Superklasse erhalten. 
+- Fabrik erstellt diese konkrete Auspraegung. (Erstellmethoden oftmals statisch deklariert.)
+- Superklasse gibt wie bei gewoehnlicher Vererbung zu implementierendes Verhalten vor. 

@@ -1,0 +1,24 @@
+Abhaengigkeitsumkehrungsprinzip:
+- Hochstufige Komponenten sollen nicht von niedrigstufigen Elementen abhaengig sein. Stattdessen 
+  sollen sie sich beide auf Abstraktionen stuetzen.
+
+Heisst: 
+Mit Hochstufigen Komponenten sind die Superklassen gemeint, also die jenigen Klassen, die sich das
+Grundlegende Verhalten implementieren (mit niedrigstufigen Klassen entsprechend die erbenden 
+Klassen). Nun sollen alle Unterklassen unter einer Abstraktion (z.B. einem Interface / einer 
+abstrakten Superklasse) zusammengefasst werden um die Objektabhaengigkeit zu minimieren. Wie bei 
+so gut wie allen OO-Entwicklungsmustern traegt dies zur Wartbarkeit / Aenderbarkeit des Codes bei. 
+
+Bsp: 
+Wenn die Pizzeria Klasse direkt mit den ganzen verschiedenen Unterklassen von Pizza arbeiten 
+muesste, waere dies sehr unuebersichtlich und es missachtet genau den beschriebenen Fall. Wenn 
+man allerdings die Superklasse als Typ angibt umgeht man dieses Problem. Wenn 
+
+Prinzip anwenden: Bottom-Up
+Man faengt mit den kleinsten Details an und arbeitet sich anschliessend per Abstraktion zum 
+gewuenschten Level. 
+
+Richtlinien zur Befolgung des Musters: 
+- Keine Variable sollte eine Referenz auf eine konkrete Klasse halten. 
+- Keine Klasse sollte von einer konkreten Klasse abgeleitet werden. 
+- Keine Methode sollte eine implementierte Methode einer ihrer Basisklassen ueberschreiben. 

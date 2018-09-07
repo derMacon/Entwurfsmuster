@@ -1,0 +1,13 @@
+Entwurfsprinzipien:
+- Identifizieren Sie die Aspekte Ihrer Anwendung, die sich aendern koennen und trennen Sie sie 
+  von denen, die konstant bleiben.
+- Programmieren Sie auf eine Schnittstelle, nicht auf eine Implementierung.
+- Ziehen Sie die Komposition der Vererbung vor.
+- Streben Sie bei Entwuerfen mit interargierenden Objekten nach lockerer Kopplung (einfachere 
+  Erweiterung moeglich).
+- Klassen sollten fuer Erweiterung offen, aber fuer Veraenderung geschlossen sein. (Mit Vorsicht zu 
+  betrachten, dies fuehrt zu hoeherer Komplexitaet und sollte nur in sinnvollen Faellen 
+  angewendet werden.)
+- Stuetzen Sie sich auf Abstraktionen. Stuetzen Sie sich nicht auf konkrete Klassen. 
+  
+  

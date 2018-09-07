@@ -1,0 +1,24 @@
+Problemstellung: 
+- Ein Baecker moechte verschiedene Kaffeesorten verkaufen. 
+- Es soll moeglich sein verschiedene Bonuszutaten (z.B. Sahne, Zucker, etc.) hinzuzufuegen. 
+- Hierbei kann die Menge der variieren. Es ist also moeglich sowohl eine Extra-Portion, als auch 
+  zwei extra Portionen Sahne dazu zu bestellen. 
+- Ausserdem ist es moeglich verschiedene Zutaten zu kombinieren. 
+- Problem: Wenn man sich auf einfache Vererbung beschraenkt wird die Stuktur sehr schnell 
+  unuebersichtlich. 
+  
+Loesung: Decorator-Muster
+Es wird zu allererst eine abstrakte Klasse Getrank gebildet, von der sowohl die Zutaten als auch 
+die Kaffeesorten erben. Die Kaffesorten tun dies direkt. Sie besitzen zwei Felder fuer die 
+Beschreibung und den Preis, ueber entsprechende Getter sind sie abrufbar. Nun bildet man eine 
+abstrakte Wrapper-Klasse von der saemtliche Zutaten erben sollen. Jede Zutat erbt von der Wrapper 
+Klasse und muessen die Getter fuer die Beschreibung / Preis neu implementieren, denn jede Zutat 
+haelt eine Referenz auf ein Getraenk welches im Konstruktor gesetzt wird. Bei den Gettern wird 
+die Beschreibung / Preis an die Werte des Getraenks angehaengt bzw. drauf addiert. Da alle 
+Klassen von der selben Superklasse ableiten kann die Referenz nicht nur einen Kaffee ohne Zutaten 
+sondern auch einen mit diesen beinhalten. Die Wrapper-Klasse ist letztendlich dazu da eine 
+Schnittstelle herzustellen, damit die es sowohl geordnet ist und die Referenz wie erwaehnt 
+bereits modifizierte Objekte halten kann. 
+
+Beim Bestellen wird eine zugrunde liegende Kaffesorte gewaehlt (z.B. Espresso). Diese wird mit 
+den einzelnen Zutaten "dekoriert" (Bsp. siehe main Klasse im Code). 

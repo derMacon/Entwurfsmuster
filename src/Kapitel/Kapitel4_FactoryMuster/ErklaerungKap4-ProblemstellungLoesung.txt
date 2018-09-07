@@ -1,0 +1,27 @@
+Problemstellung: Einfach
+- Man moechte eine Pizzeria mit mehreren Zweigstellen erstellen.
+- Bei der Zubereitung der Pizza gibt diverse Arbeitsablaeufe die von den Zweigstellen allesamt 
+  unterschiedliche abgearbeitet werden koennen (Z.B. Schneiden: Vierteln vs. in acht Stuecke 
+  schneiden, etc.).
+- Problem: Um Code-Dopplung zu vermeiden sollen die Pizza in einer einzigen Klasse implementiert 
+  sein -> Es muss ein Pizza-Objekt entsprechend den Anforderungen (welche Zweigstelle?) erstellt 
+  werden. 
+  
+Loesung: Factory-Muster
+Es wird eine abstrakte Superklasse "Pizzeria" erstellt. Verschiedene Zweigstellen beerben diese. 
+Jede dieser Zweigstellen implementiert eine Methode "erstellePizza()". Diese dient als so 
+genannte Factory, denn sie erstellt ein Objekt des gewuenschten Typs. Bei der Erstellung wird ein 
+entsprechender Konstruktor einer speziellen Pizza-Klasse aufgerufen. Diese Klasse implementiert 
+die Methoden der Arbeitsschritte (backen, schneiden, etc.) entsprechend. In der Superklasse wird 
+eine Methode deklariert ("bestellePizza()") die mit diesem Objekt arbeitet. Durch den 
+Polymorphismus / Abstraktion ist es irrelevant mit welchem Pizza-Objekt man arbeitet, da alle 
+erbenden Klassen des Pizza-Typs die dort aufgerufenen Methoden implementiert / geerbt haben. Die 
+Methode "bestellePizza()" wird auch fabrikMethode genannt.
+
+  ----------------
+
+Problemstellung: Erweitert
+- Einzelne Zweigstellen benutzen minderwertige Zutaten.
+- Wie kann man man Konsistenz bei den Zutaten sichern?
+
+Loesung: 

@@ -1,0 +1,16 @@
+Problemstellung: 
+- Es soll eine Simulation fuer ein Spiel mit diversen Entenarten geschrieben werden.
+- Entenarten besitzen verschiedene Eigenschaften.
+- In manchen Faellen nicht nur verschiedene Auspraegungen, sondern sogar nicht existent. 
+- Verschiedene Arten sollen aber alle von der selben Klasse erben. 
+
+Problem hierbei (Lsg.): 
+Wenn  dies direkt in die Klasse geschrieben  wird ist diese sehr schlecht wartbar,  denn die Klassen
+sind  sehr  schlecht wartbar. Die  Loesung  hierbei,  das  Strategy-Muster.  Man versucht  aehnliche
+Algrothmen wie z.B. das Flug- oder Quakverhalten in eine Gruppe/Familie von Algorithmen 
+zusammenzufassen (zu kapseln). Dies geschieht mithilfe verschiedener Interfaces z.B. 
+Quakverhalten  /  Flugverhalten.  Die  Mutterklasse  besitzt  entsprechende  Felder  von  den  Typen
+Quak-/Flugverhalten.  Diese werden entsprechend gesetzt  und in  den jeweiligen Methoden aufgerufen.
+Die  aufrufenden erbenden  Klassen implementieren  das  entsprechende  Interface und  koennen so das
+gewuenschte Verhalten  implementieren.  Hierbei  gestaltet  sich  die  Wartung  des  Codes  deutlich
+einfacher.
