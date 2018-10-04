@@ -6,3 +6,4 @@ Muster:
   - Observer
   - Decorator
   - Factory
+  - Singleton
