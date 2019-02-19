@@ -6,5 +6,5 @@ Zusammenfassungen / Lösungen zum Buch Entwurfsmuster (Von Kopf bis Fuß).
   - Decorator
   - Factory
   - Singleton
-### Zusammenfassung: 
+### Beschreibung: 
 Eine Beschreibung der Muster ist [hier](https://github.com/derMacon/Entwurfsmuster/blob/master/zusammenfassung/mainRecap.pdf) zu finden. 
