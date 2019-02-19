@@ -1,0 +1,1 @@
+Ich kenne das Decorator-Muster und bin deswegen EIN KÖNIG!

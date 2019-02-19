@@ -1,0 +1,34 @@
+<project name="Patterns" default="compile" basedir=".">
+<description>
+	Build-Datei für Entwurfsmuster von Kopf bis Fuß
+</description>
+<property name="src" location="src"/>
+<property name="classes" location="classes"/>
+<property name="include" location="classes"/>
+
+	<target name="init">
+<!-- Zeitstempel erstellen -->
+<tstamp/>
+<!-- Ausgabeverzeichnis erstellen, dass zum Kompilieren verwendet wird -->
+<mkdir dir="${classes}"/>
+</target>
+<path id="compile.classpath">
+</path>
+
+	<target name="compile" depends="init" description="Quellen kompilieren">
+<!-- den Java-Code aus ${src} nach ${classes} kompilieren -->
+
+	<javac srcdir="${src}" destdir="${classes}">
+<classpath refid="compile.classpath"/>
+</javac>
+</target>
+
+	<target name="clean" description="Aufräumen">
+
+	<!--
+ die Verzeichnisbäume ${classes} und ${dist} löschen
+-->
+<delete dir="${classes}"/>
+<delete dir="${dist}"/>
+</target>
+</project>

@@ -1,0 +1,80 @@
+\documentclass[a4paper, 11pt]{scrartcl}
+
+%Packages fuer die Darstellung von Quellcode
+\usepackage{beramono} %schoene Schriftart
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english, ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{enumitem}
+\usepackage[a4paper, bottom=2cm,includeheadfoot]{geometry}
+\usepackage{afterpage} %Um Titelseite mit gesonderter Formatierung zu belegen
+\usepackage{blindtext}
+\usepackage{todonotes}
+
+% Noetig fuer verschachtelte Imports 
+\usepackage{import}
+\usepackage{subcaption}
+
+% Bilder
+\usepackage{graphicx}
+
+% Header Informationen festgelegt
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\rightmark}
+\chead{\thepart}
+\lhead{\nouppercase{\leftmark}}
+\cfoot{\thepage}
+
+
+%Quellcodestyle Spezifikationen
+\definecolor{DarkPurple}{rgb}{0.4,0.1,0.4}
+\definecolor{DarkCyan}{rgb}{0.0,0.5,0.4}
+\definecolor{LightLime}{rgb}{0.3,0.5,0.4}
+\definecolor{Blue}{rgb}{0.0,0.0,1.0}
+
+% Macro um nicht jedes Mal die listing und namen-Referenz angeben zu muessen
+\newcommand{\lstref}[1]{(siehe Listing \ref{#1}, S. \pageref{#1}, \nameref{#1})}
+
+
+% Syntaxhighlighting festgelegt
+\lstdefinestyle{CodeHighlighting} 
+{
+language=Java, %mit mehreren Sprachen moeglich, ermoeglicht Syntaxhighlighting
+columns=flexible,
+numbers=left,
+frame=single,
+frameround=tttt,
+showstringspaces=false,
+basicstyle=\footnotesize\ttfamily,
+keywordstyle=\bfseries\color{DarkPurple},
+commentstyle=\itshape\color{LightLime},
+stringstyle=\color{Blue}
+}
+
+% Titelseite
+\title{Entwurfsmuster - von Kopf bis Fuß}
+\subtitle{\Large{Zusammenfassung}}
+\date{} %Datum unerwuenscht
+
+\begin{document}
+\newgeometry{a4paper, bottom=5cm}
+\maketitle
+\pagestyle{plain}
+\tableofcontents
+\clearpage
+\pagestyle{fancy}
+
+\input{entwurfsprinzipien/docEntwurfsprinzipien}
+
+
+
+
+\end{document}

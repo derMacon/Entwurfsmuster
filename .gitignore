@@ -1,6 +1,14 @@
 *.idea
+*.iml
+
 *.aux
 *.dvi
 *.log
 *synctex.gz
 *.toc
+*.atfi
+*.bbl
+*.blg
+*.lof
+*.out
+*.log
