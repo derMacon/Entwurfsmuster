@@ -64,6 +64,8 @@ stringstyle=\color{Blue}
 \subtitle{\Large{Zusammenfassung}}
 \date{} %Datum unerwuenscht
 
+\newcommand{\prefWidth}{width=0.8\linewidth}
+
 \begin{document}
 \newgeometry{a4paper, bottom=5cm}
 \maketitle
@@ -73,8 +75,15 @@ stringstyle=\color{Blue}
 \pagestyle{fancy}
 
 \input{_entwurfsprinzipien/docEntwurfsprinzipien}
-
-
-
+\clearpage
+\input{strategy/docStrategyPattern}
+\clearpage
+\input{decorator/docDecoratorPattern}
+\clearpage
+\input{observer/docObserverPattern}
+\clearpage
+\input{singleton/docSingletonPattern}
+\clearpage
+\input{factory/docFactoryPattern}
 
 \end{document}
