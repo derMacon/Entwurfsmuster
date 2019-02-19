@@ -1,5 +1,5 @@
 # Entwurfsmuster - Zusammenfassung
-Zusammenfassungen / Lösungen zum Buch Entwurfsmuster (Von Kopf bis Fuß). 
+Zusammenfassungen / Lösungen zum Buch [Entwurfsmuster (Von Kopf bis Fuß)](https://www.amazon.de/Entwurfsmuster-von-Kopf-bis-Fu%C3%9F/dp/3897214210).
 ### Muster: 
   - [Strategy](https://github.com/derMacon/Entwurfsmuster/tree/master/zusammenfassung/strategy)
   - [Observer](https://github.com/derMacon/Entwurfsmuster/tree/master/zusammenfassung/observer)
