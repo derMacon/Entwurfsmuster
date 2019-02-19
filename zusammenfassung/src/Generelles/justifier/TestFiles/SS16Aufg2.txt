@@ -1,6 +1,0 @@
-Aufgabe 2
-Welche Voraussetzungen müssen für eine Methode gelten, damit sie eine Methode, die in einer 
-Super-Klasse deklariert ist, überschreiben kann? Kreuzen Sie bitte alle richtigen Antworten an:
-
-Skript - Folie 273: Überschreiben möglich wenn, gleicher Methodenname (Bezeichner), gleiche 
-Parameterliste, gleicher Ergebnistyp. 
