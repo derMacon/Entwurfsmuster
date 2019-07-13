@@ -17,6 +17,9 @@
 \usepackage{blindtext}
 \usepackage{todonotes}
 
+% Package der FloatBarrier
+\usepackage{placeins}
+
 % Noetig fuer verschachtelte Imports 
 \usepackage{import}
 \usepackage{subcaption}
@@ -59,6 +62,11 @@ commentstyle=\itshape\color{LightLime},
 stringstyle=\color{Blue}
 }
 
+% Einzelne Bilder auf einer Seite werden soweit wie moeglich zum Seitenanfang gepackt
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
 % Titelseite
 \title{Entwurfsmuster - von Kopf bis Fuß}
 \subtitle{\Large{Zusammenfassung}}
@@ -91,6 +99,10 @@ stringstyle=\color{Blue}
 \input{adapter/docAdapterPattern}
 \clearpage
 \input{visitor/docVisitorPattern}
+\clearpage
+\input{iterator/docIteratorPattern}
+\clearpage
+\input{composite/docCompositePattern}
 \clearpage
 
 \end{document}

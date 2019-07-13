@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 \section{Command-Muster}
 
 \subsection{Problemstellung}
@@ -39,14 +38,6 @@ Ein Command-Objekt kapselt einzelne Anfragen indem ein Interface nach spezifisch
 \paragraph{Macro-Commands}
 Um mehrere Command-Objekte "uber einen Slot in der Fernbedienung auszuf"uhre, wird kann man einfach eine Instanzvariable mit einer Collection von Commando-Objekten welche ausgef"uhrt werden sollen implementieren. In der \emph{execute}-Methode werden diese dann alle nacheinander ausgef"uhrt. 
 
-\begin{figure}[b!]
-	\centering
-	\includegraphics[width=1\linewidth]{command/img/macroCommandCodeExample}
-	\caption{Codetemplate des Macro-Command-Musters}
-	\label{fig:macroCommand}
-\end{figure}
-
-
 \subsection{Vorteile}
 \begin{itemize}
 	\item Die Bearbeitung der Aufgaben ist komplett gekapselt
@@ -54,12 +45,6 @@ Um mehrere Command-Objekte "uber einen Slot in der Fernbedienung auszuf"uhre, wi
 	\item Einfach Erweiterbar, z.B. Queue welche von mehreren Threads abgearbeitet wird. 
 	\item M"oglich einfach logging und load Methode in die Schnittstelle aufzunehmen. Dies erm"oglicht es im Fehlerfall einen Datenverlust zu vehindern. 
 \end{itemize}
-=======
-\section{Command-Muster}
-
-\subsection{Problemstellung}
-Es soll eine Universalfernbedienung entworfen werden. Hierbei k"onnen verschiedene Haushaltsger"ate angeschlossen werden. Die Fernbedienung soll f"ur jedes angeschlossene Ger"at einen An- und Ausschalter zur Verf"ugung stellen. Problem hierbei. Diverse Ger"atschaften besitzen haben unterschiedliche Schnittstellen. Bei manchen hei"sen diese schlicht und ergreifend anders als gefordert, bei anderen gibt es eine derart schlichte Kontrollfunktion nicht. Ein Beispiel w"are hier zum Beispiel ein Garagentor welches auf und zu gemacht werden kann aber auch eine Stereoanlage soll nicht nur angeschaltet werden, es soll auch ein Lied mit einer bestimmten Lautst"arke gespielt werden. 
-
 
 \begin{figure}
 	\centering
@@ -67,4 +52,3 @@ Es soll eine Universalfernbedienung entworfen werden. Hierbei k"onnen verschiede
 	\caption{UML-Darstellung der zu implementierenden Fernsteuerung}
 	\label{fig:commandRemote}
 \end{figure}
->>>>>>> 7385d687a6c25fd8f0ca4aec01f29fe339feb8b3
