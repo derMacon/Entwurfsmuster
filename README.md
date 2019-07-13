@@ -9,5 +9,6 @@ Zusammenfassungen / Lösungen zum Buch [Entwurfsmuster (Von Kopf bis Fuß)](http
   - [Command](https://github.com/derMacon/Entwurfsmuster/tree/master/zusammenfassung/command)
   - [Visitor](https://github.com/derMacon/Entwurfsmuster/tree/master/zusammenfassung/visitor)
   - [Composite](https://github.com/derMacon/Entwurfsmuster/tree/master/zusammenfassung/composite)
+  - [Builder](https://github.com/derMacon/Entwurfsmuster/tree/master/zusammenfassung/builder)
 ### Beschreibung: 
 Eine umfassende Beschreibung der Muster (Zusammenfassung vom Buch) ist [hier](https://github.com/derMacon/Entwurfsmuster/blob/master/zusammenfassung/mainRecap.pdf) zu finden. 
