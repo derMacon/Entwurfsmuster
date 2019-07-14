@@ -12,11 +12,10 @@ Sie haben soeben den Auftrag erhalten, einen Urlaubsplaner f"ur einen neuen Them
 
 Es soll besonders Wert auf eine flexible Datenstruktur gelegt werden, da verschiedene Besucher auch sehr verschiedene W"unsche haben. Zudem ben"otigen Sie eine Abfolge von m"oglicherweise komplexen Schritten f"ur die Erzeugung des Planers. Wie k"onnen Sie die komplexe Struktur erzeugen, ohne sie mit den Schritten f"ur die Erzeugung zu vermischen?
 
-
 \paragraph{Erkl"arung des Musters}
 \textbf{Definition:} Verwenden Sie das Builder-Muster, um die Konstruktion eines Produkts zu kapseln und seinen Aufbau in mehreren Schritten zu erm"oglichen.
 
-"Ahnlichkeiten zum Iterator-Muster. Dort wurde die Iteration in einem separaten Objekt gekapselt und die interne Repr"asentation der Collection vor dem Client verborgen. Hier steckt der gleiche Gedanke dahinter: Wir kapseln die Erzeugung des Reiseplaners in einem Objekt *dem Builder oder Erbauer, hier nennen wir es Ersteller), und unser Client bittet dann den Ersteller, die Struktur des Reiseplaners f"ur ihn zu erstellen. Ein Blick in das folgende Diagramm sollte hierbei Klarheit verschaffen. 
+"Ahnlichkeiten zum Iterator-Muster. Dort wurde die Iteration in einem separaten Objekt gekapselt und die interne Repr"asentation der Collection vor dem Client verborgen. Hier steckt der gleiche Gedanke dahinter: Wir kapseln die Erzeugung des Reiseplaners in einem Objekt (dem Builder oder Erbauer, hier nennen wir es Ersteller), und unser Client bittet dann den Ersteller, die Struktur des Reiseplaners f"ur ihn zu erstellen. Ein Blick in das folgende Diagramm sollte hierbei Klarheit verschaffen. 
 
 \paragraph{Vorteile des Builder-Musters}
 \begin{itemize}
